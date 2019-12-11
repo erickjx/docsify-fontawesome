@@ -1,0 +1,40 @@
+{
+  "name": "docsify-fontawesome",
+  "version": "0.0.1",
+  "description": "A simple FontAwesome plugin for Docsify",
+  "main": "src",
+  "scripts": {
+    "build": "npm run build:dev && npm run build:prod",
+    "build:dev": "webpack src/index.js -o dist/docsify-fontawesome.js --mode=development && webpack src/index.js -o example/docsify-fontawesome.js --mode=development",
+    "build:prod": "webpack src/index.js -o dist/docsify-fontawesome.min.js --mode=production",
+    "example": "npx docsify serve example"
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickjx/docsify-fontawesome.git"
+  },
+  "author": "Erick JA",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/erickjx/docsify-fontawesome/issues"
+  },
+  "homepage": "https://github.com/erickjx/docsify-fontawesome#readme",
+  "devDependencies": {
+    "docsify-cli": "^4.4.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {},
+  "keywords": [
+    "Docsify",
+    "Fontaesome"
+  ]
+}

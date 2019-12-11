@@ -1,0 +1,56 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# https://editorconfig.org/
+# By EJA
+
+#
+# Plugin for Eclipse:
+#   http://editorconfig-eclipse.github.io/repository/
+#
+# Kate / KWrite  nativ supported
+#
+# Note++ :  Download plugin from configuration
+#
+# Vim : https://github.com/editorconfig/editorconfig-vim#readme
+# Opensuse:  zypper in editorconfig vim-plugin-editorconfig
+#
+# Sublime: https://github.com/sindresorhus/editorconfig-sublime#readme
+#   Install from Package Control: https://packagecontrol.io/
+
+root = true
+
+# Root config
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Config for Java & XML
+[*.{java,xml}]
+indent_size = 4
+
+# Config for HTML & CSS
+[*.{htm,html,css,scss}]
+indent_size = 2
+
+# Config for JS & TS
+[*.{ts,tsx,js,jsx}]
+indent_size = 2
+
+# Config for YML & JSON
+[*.{yaml,yml,json}]
+indent_size = 2
+
+# Config for Python
+[*.py]
+indent_size = 4
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
