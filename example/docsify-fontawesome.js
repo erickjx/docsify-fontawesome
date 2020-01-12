@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin-fontawesome */ \"./src/plugin-fontawesome.js\");\n\n\n// if (!window.$docsify) {\n//   window.$docsify = {}\n// }\nwindow.$docsify = window.$docsify || {};\nwindow.$docsify.plugins = (window.$docsify.plugins || []).concat(_plugin_fontawesome__WEBPACK_IMPORTED_MODULE_0__[\"install\"])\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin-fontawesome */ \"./src/plugin-fontawesome.js\");\n\n\n// if (!window.$docsify) {\n//   window.$docsify = {}\n// }\nwindow.$docsify = window.$docsify || {};\nwindow.$docsify.plugins = (window.$docsify.plugins || []).concat(_plugin_fontawesome__WEBPACK_IMPORTED_MODULE_0__[\"install\"]);\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"install\", function() { return install; });\nfunction install (hook) {\n    \n    const faRegExp = /:fa[\\w -]+:/gm;\n    \n    hook.beforeEach(content => {\n        let faHtmlRendered = content\n        .replace(\n          faRegExp,\n          function (m, code) {\n            console.log('m: '+m.replace(/:/gi,''));            \n            let rendered = `<i class=\"${m.replace(/:/gi,'')}\"></i>`;\n            return rendered;\n          }\n        );\n        return faHtmlRendered;\n    });\n    hook.afterEach(function (html, next) {\n        let faHtmlRendered = html\n        .replace(\n          faRegExp,\n          function (m, code) {\n            console.log('m: '+m.replace(/:/gi,''));            \n            let rendered = `<i class=\"${m.replace(/:/gi,'')}\"></i>`;\n            return rendered;\n          }\n        );\n        //console.log('faHtmlRendered: '+faHtmlRendered);\n        next(faHtmlRendered);\n    });  \n    \n}\n\n\n//# sourceURL=webpack:///./src/plugin-fontawesome.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"install\", function() { return install; });\nfunction install(hook) {\n  const faRegExp = /:fa[\\w -]+:/gm;\n\n  hook.beforeEach(content => {\n    let faHtmlRendered = content.replace(faRegExp, function(m, code) {\n      console.log('m: ' + m.replace(/:/gi, ''));\n      let rendered = `<i class=\"${m.replace(/:/gi, '')}\"></i>`;\n      return rendered;\n    });\n    return faHtmlRendered;\n  });\n  hook.afterEach(function(html, next) {\n    let faHtmlRendered = html.replace(faRegExp, function(m, code) {\n      console.log('m: ' + m.replace(/:/gi, ''));\n      let rendered = `<i class=\"${m.replace(/:/gi, '')}\"></i>`;\n      return rendered;\n    });\n    //console.log('faHtmlRendered: '+faHtmlRendered);\n    next(faHtmlRendered);\n  });\n}\n\n\n//# sourceURL=webpack:///./src/plugin-fontawesome.js?");
 
 /***/ })
 

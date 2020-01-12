@@ -1,14 +1,8 @@
 {
   "name": "docsify-fontawesome",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A simple FontAwesome plugin for Docsify",
   "main": "src",
-  "scripts": {
-    "build": "npm run build:dev && npm run build:prod",
-    "build:dev": "webpack src/index.js -o dist/docsify-fontawesome.js --mode=development && webpack src/index.js -o example/docsify-fontawesome.js --mode=development",
-    "build:prod": "webpack src/index.js -o dist/docsify-fontawesome.min.js --mode=production",
-    "example": "npx docsify serve example"
-  },
   "files": [
     "src",
     "dist",
@@ -24,15 +18,23 @@
     "url": "https://github.com/erickjx/docsify-fontawesome/issues"
   },
   "homepage": "https://github.com/erickjx/docsify-fontawesome#readme",
+  "dependencies": {},
   "devDependencies": {
     "docsify-cli": "^4.4.0",
-    "webpack": "^4.41.2",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "directories": {
     "example": "example"
   },
-  "dependencies": {},
+  "scripts": {
+    "build": "npm run build:dev && npm run build:prod",
+    "build:dev": "webpack src/index.js -o dist/docsify-fontawesome.js --mode=development && webpack src/index.js -o example/docsify-fontawesome.js --mode=development",
+    "build:prod": "webpack src/index.js -o dist/docsify-fontawesome.min.js --mode=production",
+    "prettier:format": "prettier --write \"{,src/**/,example/**/}*.{md,json,js,ts,html,css,scss,yml}\"",
+    "example": "npx docsify serve example"
+  },
   "keywords": [
     "Docsify",
     "Fontaesome"

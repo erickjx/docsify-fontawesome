@@ -1,7 +1,7 @@
-import { install } from './plugin-fontawesome'
+import { install } from './plugin-fontawesome';
 
 // if (!window.$docsify) {
 //   window.$docsify = {}
 // }
 window.$docsify = window.$docsify || {};
-window.$docsify.plugins = (window.$docsify.plugins || []).concat(install)
+window.$docsify.plugins = (window.$docsify.plugins || []).concat(install);
