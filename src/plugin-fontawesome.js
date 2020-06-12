@@ -2,15 +2,15 @@ export function install(hook) {
   const faRegExp = /:fa[\w -]+:/gm;
 
   hook.beforeEach(content => {
-    let faHtmlRendered = content.replace(faRegExp, function(m, code) {
+    let faHtmlRendered = content.replace(faRegExp, function (m, code) {
       console.log('m: ' + m.replace(/:/gi, ''));
       let rendered = `<i class="${m.replace(/:/gi, '')}"></i>`;
       return rendered;
     });
     return faHtmlRendered;
   });
-  hook.afterEach(function(html, next) {
-    let faHtmlRendered = html.replace(faRegExp, function(m, code) {
+  hook.afterEach(function (html, next) {
+    let faHtmlRendered = html.replace(faRegExp, function (m, code) {
       console.log('m: ' + m.replace(/:/gi, ''));
       let rendered = `<i class="${m.replace(/:/gi, '')}"></i>`;
       return rendered;

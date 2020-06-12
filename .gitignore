@@ -4,9 +4,8 @@ package-lock.json
 /node_modules
 /dist
 
-
-# Created by https://www.gitignore.io/api/git,vim,kate,node,linux,macos,backup,windows,notepadpp,compressed,sublimetext,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=git,vim,kate,node,linux,macos,backup,windows,notepadpp,compressed,sublimetext,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/git,vim,kate,node,linux,macos,backup,windows,notepadpp,compressed,sublimetext,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,vim,kate,node,linux,macos,backup,windows,notepadpp,compressed,sublimetext,visualstudiocode
 
 ### Backup ###
 *.bak
@@ -147,6 +146,12 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
 # Optional REPL history
 .node_repl_history
 
@@ -162,14 +167,18 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# next.js build output
+# Next.js build output
 .next
 
-# nuxt.js build output
+# Nuxt.js build / generate output
 .nuxt
+dist
 
-# react / gatsby
-public/
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
 
 # vuepress build output
 .vuepress/dist
@@ -182,6 +191,12 @@ public/
 
 # DynamoDB Local files
 .dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
 
 ### NotepadPP ###
 # Notepad++ backups #
@@ -221,6 +236,7 @@ GitHub.sublime-settings
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
 [._]*.sw[a-p]
 [._]s[a-rt-v][a-z]
 [._]ss[a-gi-z]
@@ -243,6 +259,7 @@ tags
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.code-workspace
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
@@ -274,4 +291,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/git,vim,kate,node,linux,macos,backup,windows,notepadpp,compressed,sublimetext,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/git,vim,kate,node,linux,macos,backup,windows,notepadpp,compressed,sublimetext,visualstudiocode
