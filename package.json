@@ -36,7 +36,7 @@
     "build:prod": "webpack src/index.js -o dist/docsify-fontawesome.min.js --mode=production",
     "prettier:format": "npx prettier --write \"{,src/**/,example/**/}*.{md,json,js,ts,html,css,scss,yml}\"",
     "prettier:check": "npx prettier --list-different \"{,src/**/,example/**/}*.{md,json,js,ts,html,css,scss,yml}\" ",
-    "example": "npm run build && npx docsify serve example",
+    "example": "npm run build && npx docsify serve example --open",
     "lic-chk": "npx license-checker",
     "lib-chk": "npx ncu",
     "lib-chk-up": "npx ncu -u"
