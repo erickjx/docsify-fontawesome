@@ -1,4 +1,4 @@
-# FontAwesome plugin for Docsify Example
+# FontAwesome plugin for Docsify
 
 ## Example
 
