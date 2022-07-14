@@ -13,7 +13,6 @@ export function install(hook) {
       let rendered = `<i class="${m.replace(/:/gi, '')}"></i>`;
       return rendered;
     });
-    //console.log('faHtmlRendered: '+faHtmlRendered);
     next(faHtmlRendered);
   });
 }
