@@ -1,6 +1,6 @@
 {
   "name": "docsify-fontawesome",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simple FontAwesome plugin for Docsify",
   "main": "src",
   "files": [
@@ -24,7 +24,7 @@
     "license-checker": "latest",
     "npm-check-updates": "latest",
     "prettier": "2.8.4",
-    "webpack": "5.75.0",
+    "webpack": "5.76.2",
     "webpack-cli": "5.0.1"
   },
   "directories": {
