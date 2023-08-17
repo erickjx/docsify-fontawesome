@@ -7,10 +7,10 @@
 1. Insert FontAwesome **CSS** into docsify document (index.html)
 
 ```html
-<link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
-<link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
-<link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
-<link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+<link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+<link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+<link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+<link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
 ```
 
 2. Then insert script plugin into same document
