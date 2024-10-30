@@ -3,7 +3,6 @@ export function install(hook) {
 
   hook.beforeEach(content => {
     let faHtmlRendered = content.replace(faRegExp, function (m, code) {
-      console.log('m: ' + m.replace(/:/gi, ''));
       let rendered = `<i class="${m.replace(/:/gi, '')}"></i>`;
       return rendered;
     });
@@ -11,11 +10,9 @@ export function install(hook) {
   });
   hook.afterEach(function (html, next) {
     let faHtmlRendered = html.replace(faRegExp, function (m, code) {
-      console.log('m: ' + m.replace(/:/gi, ''));
       let rendered = `<i class="${m.replace(/:/gi, '')}"></i>`;
       return rendered;
     });
-    //console.log('faHtmlRendered: '+faHtmlRendered);
     next(faHtmlRendered);
   });
 }
