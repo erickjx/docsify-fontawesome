@@ -1,6 +1,6 @@
 {
   "name": "docsify-fontawesome",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple FontAwesome plugin for Docsify",
   "main": "src",
   "files": [
@@ -32,11 +32,13 @@
   },
   "scripts": {
     "build": "npm run build:dev && npm run build:prod",
-    "build:dev": "webpack ./src/index.js -o ./dist/ --output-filename docsify-fontawesome.js --mode=development && webpack ./src/index.js -o ./example/ --output-filename docsify-fontawesome.js --mode=development",
+    "build:dev": "webpack ./src/index.js -o ./dist/ --output-filename docsify-fontawesome.js --mode=development && webpack ./src/index.js -o ./example/ --output-filename docsify-fontawesome.js --mode=development && npm run copy-svg",
     "build:prod": "webpack ./src/index.js -o ./dist/ --output-filename docsify-fontawesome.min.js --mode=production",
     "prettier:format": "npx prettier --write \"{,src/**/,example/**/}*.{md,json,js,ts,html,css,scss,yml}\"",
     "prettier:check": "npx prettier --list-different \"{,src/**/,example/**/}*.{md,json,js,ts,html,css,scss,yml}\" ",
+    "copy-svg": "node -e \"require('fs').cpSync('./dist/docsify-fontawesome.js', './example-svg/docsify-fontawesome.js', {recursive: false});\"",
     "example": "npm run build && npx docsify serve example --open",
+    "example-svg": "npm run build && npx docsify serve example-svg --open",
     "lic-chk": "npx license-checker",
     "lib-chk": "npx ncu",
     "lib-chk-up": "npx ncu -u"

@@ -39,6 +39,14 @@ This code is converted to :
 1. Run `npm run example`
 1. Go to [http://localhost:3000/]()
 
+## SVG Example
+
+View source code to understand SVG usage
+
+1. Run `npm run build`
+1. Run `npm run example-svg`
+1. Go to [http://localhost:3000/]()
+
 ## License
 
 [Apache License](LICENSE)
