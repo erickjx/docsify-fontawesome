@@ -24,7 +24,7 @@
     "license-checker": "latest",
     "npm-check-updates": "latest",
     "prettier": "3.3.3",
-    "webpack": "5.95.0",
+    "webpack": "5.104.1",
     "webpack-cli": "5.1.4"
   },
   "directories": {
